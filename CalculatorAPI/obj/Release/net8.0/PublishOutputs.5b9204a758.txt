@@ -1,0 +1,12 @@
+C:\publish_calc\CalculatorAPI.exe
+C:\publish_calc\appsettings.Development.json
+C:\publish_calc\appsettings.json
+C:\publish_calc\CalculatorAPI.dll
+C:\publish_calc\CalculatorAPI.deps.json
+C:\publish_calc\CalculatorAPI.runtimeconfig.json
+C:\publish_calc\CalculatorAPI.pdb
+C:\publish_calc\Microsoft.AspNetCore.OpenApi.dll
+C:\publish_calc\Microsoft.OpenApi.dll
+C:\publish_calc\Swashbuckle.AspNetCore.Swagger.dll
+C:\publish_calc\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\publish_calc\Swashbuckle.AspNetCore.SwaggerUI.dll

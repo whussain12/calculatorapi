@@ -1,0 +1,12 @@
+C:\CalPublish\CalculatorAPI.exe
+C:\CalPublish\appsettings.Development.json
+C:\CalPublish\appsettings.json
+C:\CalPublish\CalculatorAPI.dll
+C:\CalPublish\CalculatorAPI.deps.json
+C:\CalPublish\CalculatorAPI.runtimeconfig.json
+C:\CalPublish\CalculatorAPI.pdb
+C:\CalPublish\Microsoft.AspNetCore.OpenApi.dll
+C:\CalPublish\Microsoft.OpenApi.dll
+C:\CalPublish\Swashbuckle.AspNetCore.Swagger.dll
+C:\CalPublish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\CalPublish\Swashbuckle.AspNetCore.SwaggerUI.dll
