@@ -30,3 +30,8 @@ jobs:
         run: |
           cd CalculatorAPI
           dotnet build --configuration Release
+          
+      - name: Publish the application
+        run: |
+          cd CalculatorAPI
+          dotnet publish --configuration Release --output ./publish
