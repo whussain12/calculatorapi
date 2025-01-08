@@ -49,4 +49,4 @@ jobs:
         run: |
           $password = ConvertTo-SecureString $env:REMOTE_PASSWORD -AsPlainText -Force
           $credential = New-Object System.Management.Automation.PSCredential ($env:REMOTE_USER, $password)
-          Copy-Item -Path "CalculatorAPI/publish/*" -Destination "\\$env:TEST_HOST_SERVER\D$\Websites\testapitestapi" -Recurse -Credential $credential
+          Copy-Item -Path "CalculatorAPI/publish/*" -Destination "\\$env:TEST_HOST_SERVER\D$\Websites\testapi" -Recurse -Credential $credential
