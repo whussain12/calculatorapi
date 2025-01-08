@@ -41,3 +41,12 @@ jobs:
         run: |
           cd CalculatorAPI
           dotnet publish --configuration Release --output ./publish
+      - name: Copy files to remote server
+        env:
+          TEST_HOST_SERVER: ${{ secrets.TEST_HOST_SERVER }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_PASSWORD: ${{ secrets.REMOTE_PASSWORD }}
+        run: |
+          $password = ConvertTo-SecureString $env:REMOTE_PASSWORD -AsPlainText -Force
+          $credential = New-Object System.Management.Automation.PSCredential ($env:REMOTE_USER, $password)
+          Copy-Item -Path "CalculatorAPI/publish/*" -Destination "\\$env:TEST_HOST_SERVER\D$\Websites\testapitestapi" -Recurse -Credential $credential
