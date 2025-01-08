@@ -43,7 +43,7 @@ jobs:
           dotnet publish --configuration Release --output ./publish
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v3
         with:
           server: 217.76.53.78
           username: ftp_usr
