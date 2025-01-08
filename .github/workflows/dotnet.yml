@@ -42,11 +42,11 @@ jobs:
           cd CalculatorAPI
           dotnet publish --configuration Release --output ./publish
 
-      - name: Deploy to test server
-        uses: appleboy/scp-action@v0.1.3
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          host: ${{ secrets.TEST_SERVER_HOST }}
-          username: ${{ secrets.TEST_SERVER_USER }}
-          password: ${{ secrets.TEST_SERVER_PASSWORD }}
-          source: CalculatorAPI/publish/
-          target: D:\Websites\testapi
+          server: 217.76.53.78
+          username: ftp_usr
+          password: V77fxNSj43
+          local-dir: ./publish
+          server-dir: /testapi
