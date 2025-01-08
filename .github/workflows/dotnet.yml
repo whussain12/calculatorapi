@@ -43,10 +43,18 @@ jobs:
           dotnet publish --configuration Release --output ./publish
       - name: Copy files to remote server
         env:
-          TEST_HOST_SERVER: ${{ secrets.TEST_HOST_SERVER }}
+          TEST_SERVER_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_PASSWORD: ${{ secrets.REMOTE_PASSWORD }}
         run: |
           $password = ConvertTo-SecureString $env:REMOTE_PASSWORD -AsPlainText -Force
           $credential = New-Object System.Management.Automation.PSCredential ($env:REMOTE_USER, $password)
-          Copy-Item -Path "CalculatorAPI/publish/*" -Destination "\\$env:TEST_HOST_SERVER\D$\Websites\testapi" -Recurse -Credential $credential
+          
+          # Map the remote path as a network drive
+          New-PSDrive -Name "Z" -PSProvider FileSystem -Root "\\$env:TEST_SERVER_HOST\D$\Websites\testapi" -Credential $credential -Persist
+
+          # Copy files to the mapped drive
+          Copy-Item -Path "CalculatorAPI/publish/*" -Destination "Z:\" -Recurse
+
+          # Remove the mapped drive
+          Remove-PSDrive -Name "Z"
