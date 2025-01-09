@@ -41,8 +41,8 @@ jobs:
         run: |
           cd CalculatorAPI
           dotnet publish --configuration Release --output ./publish
-      - name: List publish directory
-        run: ls -la ./publish
+     # - name: List publish directory
+      #  run: ls -la ./publish
 
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v3.1.1
@@ -50,5 +50,5 @@ jobs:
           ftp-server: ftp://217.76.53.78
           ftp-username: ftp_usr
           ftp-password: V77fxNSj43
-          local-dir: ./publish
+          local-dir: CalculatorAPI/publish
           server-dir: /testapi
