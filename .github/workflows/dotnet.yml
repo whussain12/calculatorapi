@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
@@ -43,7 +43,7 @@ jobs:
           dotnet publish --configuration Release --output ./publish
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v3
+        uses: SamKirkland/FTP-Deploy-Action@v3.1.1
         with:
           server: 217.76.53.78
           username: ftp_usr
