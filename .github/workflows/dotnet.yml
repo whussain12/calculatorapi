@@ -48,5 +48,5 @@ jobs:
           ftp-server: ftp://217.76.53.78
           ftp-username: ftp_usr
           ftp-password: V77fxNSj43
-          local-dir: ./publish
+          local-dir: /usr/share/dotnet/publish
           server-dir: /testapi
