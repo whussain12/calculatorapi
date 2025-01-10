@@ -44,11 +44,9 @@ jobs:
      # - name: List publish directory
       #  run: ls -la ./publish
 
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v3.1.1
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          ftp-server: ftp://217.76.53.78
-          ftp-username: ftp_usr
-          ftp-password: V77fxNSj43
-          local-dir: CalculatorAPI/publish
-          server-dir: /testapi
+          server: ftp.dlptest.com
+          username: dlpuser
+          password:  rNrKYTX9g7z3RgJRmxWuGHbeu
