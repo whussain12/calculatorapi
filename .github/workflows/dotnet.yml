@@ -47,6 +47,6 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.dlptest.com
-          username: dlpuser
-          password:  rNrKYTX9g7z3RgJRmxWuGHbeu
+          server: eu-central-1.sftpcloud.io
+          username: 6a9bb211cc174cf3aaae6a38f0bfe58f
+          password:  IZHx4J7isAsnvvRCR3AAmP0VwPyIDf2p
