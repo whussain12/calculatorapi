@@ -41,8 +41,8 @@ jobs:
         run: |
           cd CalculatorAPI
           dotnet publish --configuration Release --output ./publish
-      - name: List publish directory
-        run: ls -la ./publish
+     # - name: List publish directory
+      #  run: ls -la ./publish
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
