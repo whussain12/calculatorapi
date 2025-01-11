@@ -41,12 +41,12 @@ jobs:
         run: |
           cd CalculatorAPI
           dotnet publish --configuration Release --output ./publish
-     # - name: List publish directory
-      #  run: ls -la ./publish
+      - name: List publish directory
+        run: ls -la ./publish
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: eu-central-1.sftpcloud.io
-          username: 6b38a1a1782b424d812a9e0ee3a78379
-          password:  qMtDnAHUltVllKpJnC3bNDQthbHNw7jw
+          username: bb33a21ca8fa4ddca49e0b59e78fd9f1
+          password: CVPb4BdDI94yLDXCKvYzwmzAFk72fG94
