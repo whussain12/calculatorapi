@@ -40,7 +40,7 @@ jobs:
       - name: Publish the application
         run: |
           cd CalculatorAPI
-          dotnet publish --configuration Release --output ./publish
+          dotnet publish --configuration Release
      # - name: List publish directory
       #  run: ls -la ./publish
 
