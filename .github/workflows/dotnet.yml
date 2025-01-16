@@ -48,5 +48,5 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: eu-central-1.sftpcloud.io
-          username: 9e230d9bb9914f8d96e3f431b67119d8
-          password: XRo9ndW9ckOsiJUySKgjo0SWlKSdiBiZ
+          username: 2e1620d8f41546efb11e05997ae3db13
+          password: wmTvoYAeqKoOcQVqBAauwzgCbM1bezBo
